@@ -55,8 +55,8 @@ please see the lifecycle.log file in this repository. It demonstrates 10+ cycles
 ### 1. Environment Configuration
 Create a `.env` file in the root directory of your project (or duplicate and rename `.env.example`):
 GRPC_URL=wss://api.devnet.solana.com
-SOLANA_RPC_URL=[https://api.devnet.solana.com](https://api.devnet.solana.com)
-SOLINFRA_GRPC_URL=[http://127.0.0.1:10000](http://127.0.0.1:10000)
-JITO_BLOCK_ENGINE_URL=[https://mainnet.block-engine.jito.wtf/api/v1/bundles](https://mainnet.block-engine.jito.wtf/api/v1/bundles)
+SOLANA_RPC_URL=https://api.devnet.solana.com
+SOLINFRA_GRPC_URL=http://127.0.0.1:10000
+JITO_BLOCK_ENGINE_URL=https://devnet.block-engine.jito.wtf/api/v1/bundles
 GEMINI_API_KEY=your_new_gemini_api_key
 DEMO_MODE=true
