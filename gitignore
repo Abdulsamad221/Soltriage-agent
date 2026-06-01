@@ -1,0 +1,12 @@
+# Dependency folders
+node_modules/
+
+# Environment variables
+.env
+
+# Build output
+dist/
+
+# Windows specific files
+Thumbs.db
+Desktop.ini

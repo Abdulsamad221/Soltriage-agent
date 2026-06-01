@@ -1,0 +1,178 @@
+=================================================================
+[BOOT] INITIALIZING AUTONOMOUS TRANSACTION INFRASTRUCTURE PIPELINE
+=================================================================
+[INFO] Initializing cross-platform network telemetry ingestion layer...
+[INFO] Connecting to cluster streaming endpoint: wss://api.devnet.solana.com
+[BOOT] Telemetry ingestion active. Waiting for slot triggers...
+[STREAM] Telemetry pipe established.
+[INFO] Slot subscription filter successfully committed.
+
+[CYCLE] --- Processing Runtime Operational Thread #1 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299000 │
+│ Tips Cached │ 9         │
+│ Cycle ID    │ 1         │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 32408
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #1 completed successfully.
+
+[CYCLE] --- Processing Runtime Operational Thread #2 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299040 │
+│ Tips Cached │ 15        │
+│ Cycle ID    │ 2         │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 28595
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #2 completed successfully.
+
+[CYCLE] --- Processing Runtime Operational Thread #3 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299100 │
+│ Tips Cached │ 15        │
+│ Cycle ID    │ 3         │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[DEMO] Injecting deliberate random fault: SimulatedPreFlightFailure
+[RECOVERY] Caught error: SimulatedPreFlightFailure. Reasoning...
+[AI] Agent is analyzing error: SimulatedPreFlightFailure
+[AI] Rate limit hit. Backing off for 7 seconds...
+[RECOVERY] AI decision: Rate-limited: Auto-retry after cooldown. Retrying (Attempt 2)...
+[LIFECYCLE] Status: SUBMITTED | Attempt: 2 | Tip: 40998
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #3 completed successfully.
+
+[CYCLE] --- Processing Runtime Operational Thread #4 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299180 │
+│ Tips Cached │ 15        │
+│ Cycle ID    │ 4         │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[DEMO] Injecting deliberate random fault: BlockhashNotFound
+[RECOVERY] Caught error: BlockhashNotFound. Reasoning...
+[AI] Agent is analyzing error: BlockhashNotFound
+[AI] Rate limit hit. Backing off for 7 seconds...
+[RECOVERY] AI decision: Rate-limited: Auto-retry after cooldown. Retrying (Attempt 2)...
+[LIFECYCLE] Status: SUBMITTED | Attempt: 2 | Tip: 32688
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #4 completed successfully.
+
+[CYCLE] --- Processing Runtime Operational Thread #5 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299260 │
+│ Tips Cached │ 15        │
+│ Cycle ID    │ 5         │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[DEMO] Injecting deliberate random fault: InsufficientComputeUnits
+[RECOVERY] Caught error: InsufficientComputeUnits. Reasoning...
+[AI] Agent is analyzing error: InsufficientComputeUnits
+[AI] Rate limit hit. Backing off for 7 seconds...
+[RECOVERY] AI decision: Rate-limited: Auto-retry after cooldown. Retrying (Attempt 2)...
+[LIFECYCLE] Status: SUBMITTED | Attempt: 2 | Tip: 32515.199999999997
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #5 completed successfully.
+
+[CYCLE] --- Processing Runtime Operational Thread #6 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299340 │
+│ Tips Cached │ 15        │
+│ Cycle ID    │ 6         │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 32104
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #6 completed successfully.
+
+[CYCLE] --- Processing Runtime Operational Thread #7 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299380 │
+│ Tips Cached │ 15        │
+│ Cycle ID    │ 7         │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[DEMO] Injecting deliberate random fault: SimulatedPreFlightFailure
+[RECOVERY] Caught error: SimulatedPreFlightFailure. Reasoning...
+[AI] Agent is analyzing error: SimulatedPreFlightFailure
+[AI] Rate limit hit. Backing off for 7 seconds...
+[RECOVERY] AI decision: Rate-limited: Auto-retry after cooldown. Retrying (Attempt 2)...
+[LIFECYCLE] Status: SUBMITTED | Attempt: 2 | Tip: 35950.799999999996
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #7 completed successfully.
+
+[CYCLE] --- Processing Runtime Operational Thread #8 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299460 │
+│ Tips Cached │ 15        │
+│ Cycle ID    │ 8         │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[DEMO] Injecting deliberate random fault: SimulatedPreFlightFailure
+[RECOVERY] Caught error: SimulatedPreFlightFailure. Reasoning...
+[AI] Agent is analyzing error: SimulatedPreFlightFailure
+[AI] Rate limit hit. Backing off for 7 seconds...
+[RECOVERY] AI decision: Rate-limited: Auto-retry after cooldown. Retrying (Attempt 2)...
+[LIFECYCLE] Status: SUBMITTED | Attempt: 2 | Tip: 34495.2
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #8 completed successfully.
+
+[CYCLE] --- Processing Runtime Operational Thread #9 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299540 │
+│ Tips Cached │ 15        │
+│ Cycle ID    │ 9         │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[DEMO] Injecting deliberate random fault: BlockhashNotFound
+[RECOVERY] Caught error: BlockhashNotFound. Reasoning...
+[AI] Agent is analyzing error: BlockhashNotFound
+[AI] Rate limit hit. Backing off for 7 seconds...
+[RECOVERY] AI decision: Rate-limited: Auto-retry after cooldown. Retrying (Attempt 2)...
+[LIFECYCLE] Status: SUBMITTED | Attempt: 2 | Tip: 34092
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #9 completed successfully.
+
+[CYCLE] --- Processing Runtime Operational Thread #10 ---
+┌─────────────┬───────────┐
+│ (index)     │ Values    │
+├─────────────┼───────────┤
+│ Slot        │ 466299620 │
+│ Tips Cached │ 15        │
+│ Cycle ID    │ 10        │
+│ System      │ 'Healthy' │
+└─────────────┴───────────┘
+[LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 26496
+[LIFECYCLE] Status: CONFIRMED | Slot: Unknown
+[LIFECYCLE] Status: FINALIZED | Slot: Unknown
+[STATUS] Cycle #10 completed successfully.
