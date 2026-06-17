@@ -58,5 +58,5 @@ GRPC_URL=wss://api.devnet.solana.com
 SOLANA_RPC_URL=https://api.devnet.solana.com
 SOLINFRA_GRPC_URL=http://127.0.0.1:10000
 JITO_BLOCK_ENGINE_URL=https://devnet.block-engine.jito.wtf/api/v1/bundles
-GEMINI_API_KEY=your_new_gemini_api_key
+GITHUB_TOKEN=your_github_token_here
 DEMO_MODE=true
