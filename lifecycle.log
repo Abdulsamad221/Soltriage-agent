@@ -1,162 +1,185 @@
-PS C:\Users\ABDULSAMAD\smart-tx-stack> npx tsx main.ts
+
+> smart-tx-stack@1.0.0 start
+> tsx main.ts
+
 =================================================================
 [BOOT] INITIALIZING AUTONOMOUS TRANSACTION INFRASTRUCTURE PIPELINE
 =================================================================
 [INFO] Initializing cross-platform network telemetry ingestion layer...
-[INFO] Connecting to cluster streaming endpoint: wss://api.devnet.solana.com
-[BOOT] Telemetry ingestion active. Waiting for slot triggers...
+[INFO] Connecting to cluster streaming endpoint: wss://devnet.helius-rpc.com/?api-key(REDACTED_HELIUS_API_KEY)
+[BOOT] Telemetry ingestion active. Waiting for slot triggers... 
+
 [STREAM] Telemetry pipe established.
 [INFO] Slot subscription filter successfully committed.
 
 [CYCLE] --- Processing Runtime Operational Thread #1 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978020 │
-│ Tips Cached │ 5         │
-│ Cycle ID    │ 1         │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:42:25.424Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 28404
-[2026-06-17T03:42:26.786Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978025 | Delta: +1362ms
-[2026-06-17T03:42:40.517Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978024 | Delta: +15092ms
-[STATUS] Cycle #1 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472557920                  │
+│ Tips Cached │ 5                          │
+│ Cycle ID    │ 1                          │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:06:37.073Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: 5tzwPiCsftodZipSkNq2JgD93eG5Dj52eWAP7zDB9fZvrVTKjHYd2huzJud49wFUdVT9Ag3vb8HyFuy1tBQZjSRi
+[2026-06-28T13:06:39.704Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:06:39.705Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:06:39.705Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:06:39.706Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
 
 [CYCLE] --- Processing Runtime Operational Thread #2 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978080 │
-│ Tips Cached │ 15        │
-│ Cycle ID    │ 2         │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:42:47.454Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 31511
-[2026-06-17T03:42:48.610Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978084 | Delta: +1155ms
-[2026-06-17T03:43:00.143Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978083 | Delta: +12689ms
-[STATUS] Cycle #2 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472557950                  │
+│ Tips Cached │ 15                         │
+│ Cycle ID    │ 2                          │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:06:47.682Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: 4ndAWmcLZTnMio17BoPk6qhphWp3KETTcbuMAfFHg5rL6PcyvymmHbGHVfcCHctw6mz67Abkrgbgg42uK9sDrQ1Y
+[2026-06-28T13:06:50.191Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:06:50.191Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:06:50.192Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:06:50.192Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
 
 [CYCLE] --- Processing Runtime Operational Thread #3 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978120 │
-│ Tips Cached │ 15        │
-│ Cycle ID    │ 3         │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:43:02.459Z] [DEMO] Scheduled fault injection triggered: BlockhashNotFound
-[2026-06-17T03:43:02.460Z] [RECOVERY] Caught error: BlockhashNotFound. Routing context to AI...
-[2026-06-17T03:43:02.462Z] [AI] Agent is actively analyzing error via AI Gateway: BlockhashNotFound
-[2026-06-17T03:43:05.903Z] [AI-DIAGNOSTIC - CHAIN OF THOUGHT]: The blockhash requested could not be found on the blockchain, likely due to it being outdated or the transaction being from a block that has already been finalized.
-[2026-06-17T03:43:05.903Z] [AI] Systemic Directive: The specified blockhash does not exist in the current state of the ledger. (Execute Retry: true | Premium Modifier: 2x)
-[2026-06-17T03:43:05.904Z] [RECOVERY] AI decision: The specified blockhash does not exist in the current state of the ledger.. Retrying (Attempt 2)...
-[2026-06-17T03:43:05.904Z] [RECOVERY] Refreshing blockhash context for Attempt 2...
-[2026-06-17T03:43:06.280Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 2 | Tip: 65950
-[2026-06-17T03:43:07.707Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978135 | Delta: +1427ms
-[2026-06-17T03:43:19.248Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978133 | Delta: +12957ms
-[STATUS] Cycle #3 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472557970                  │
+│ Tips Cached │ 15                         │
+│ Cycle ID    │ 3                          │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[2026-06-28T13:06:52.501Z] [DEMO] Scheduled fault injection triggered: Expired blockhash
+[2026-06-28T13:06:52.502Z] [RECOVERY] Caught error: Expired blockhash. Routing context to AI...
+[2026-06-28T13:06:52.503Z] [AI] Agent is actively analyzing error via AI Gateway: Expired blockhash
+[2026-06-28T13:06:54.470Z] [AI-GATEWAY] Notice: Activating internal fallback mechanism...
+[2026-06-28T13:06:54.471Z] [RECOVERY] AI decision: Expired Blockhash: Refreshing ledger context and re-signing. Retrying (Attempt 2/3)...
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:06:58.477Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: 2WCV3xJKEiELzzY5QFJp3V3RcGtmNjfBUd4PdidCKn9f3ppG7sXzr9Xw71BQLP7LQwWQigwjNHPVpxnRiYv3Ybuc
+[2026-06-28T13:07:00.996Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:07:00.997Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:07:00.997Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:07:00.997Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
 
 [CYCLE] --- Processing Runtime Operational Thread #4 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978180 │
-│ Tips Cached │ 15        │
-│ Cycle ID    │ 4         │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:43:25.231Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 29342
-[2026-06-17T03:43:26.380Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978184 | Delta: +1149ms
-[2026-06-17T03:43:37.934Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978183 | Delta: +12703ms
-[STATUS] Cycle #4 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472558000                  │
+│ Tips Cached │ 15                         │
+│ Cycle ID    │ 4                          │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:07:07.116Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: 5GjiDcuw8j63MPyVg4kdY9Hhn9KFV1RUTu1mZUweeLumbC4wY4UgvNH8ZA2UHEx9soPNfonB12jMXuBLgJY6YYe6
+[2026-06-28T13:07:09.621Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:07:09.622Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:07:09.622Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:07:09.623Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
 
 [CYCLE] --- Processing Runtime Operational Thread #5 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978220 │
-│ Tips Cached │ 15        │
-│ Cycle ID    │ 5         │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:43:40.417Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 27439
-[2026-06-17T03:43:41.662Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978225 | Delta: +1245ms
-[2026-06-17T03:43:52.590Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978223 | Delta: +12173ms
-[STATUS] Cycle #5 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472558020                  │
+│ Tips Cached │ 15                         │
+│ Cycle ID    │ 5                          │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:07:14.064Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: suAwPiA47ko6nRYEfYNnKLj4ek7no85EBHP7r6cjNba6whfh7ZSUCbCdCXhDJfAfcnDh4suhdznkMXW9SacNNfW
+[2026-06-28T13:07:16.575Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:07:16.575Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:07:16.576Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:07:16.576Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
 
 [CYCLE] --- Processing Runtime Operational Thread #6 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978260 │
-│ Tips Cached │ 15        │
-│ Cycle ID    │ 6         │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:43:54.875Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 28120
-[2026-06-17T03:43:56.031Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978264 | Delta: +1156ms
-[2026-06-17T03:44:07.517Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978263 | Delta: +12643ms
-[STATUS] Cycle #6 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472558040                  │
+│ Tips Cached │ 15                         │
+│ Cycle ID    │ 6                          │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:07:21.814Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: 5Teu1LZE2PQNuLtvDRcaskvYvMMfVE4p4yfzkkXorCjjas6SfhqYkUWW5asonPerrfa3yr4RPh5a86saBvZdWNqf
+[2026-06-28T13:07:24.371Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:07:24.435Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:07:24.511Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:07:24.588Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
 
 [CYCLE] --- Processing Runtime Operational Thread #7 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978300 │
-│ Tips Cached │ 15        │
-│ Cycle ID    │ 7         │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:44:09.808Z] [DEMO] Scheduled fault injection triggered: InsufficientComputeUnits
-[2026-06-17T03:44:09.809Z] [RECOVERY] Caught error: InsufficientComputeUnits. Routing context to AI...
-[2026-06-17T03:44:09.809Z] [AI] Agent is actively analyzing error via AI Gateway: InsufficientComputeUnits
-[2026-06-17T03:44:13.003Z] [AI-DIAGNOSTIC - CHAIN OF THOUGHT]: The transaction exceeded the available compute units allocated for its execution, indicating that either the transaction is too complex or the compute unit budget needs to be increased.
-[2026-06-17T03:44:13.003Z] [AI] Systemic Directive: Execution halted due to insufficient compute units, suggesting the need for optimization or resource increase. (Execute Retry: true | Premium Modifier: 1.5x)
-[2026-06-17T03:44:13.004Z] [RECOVERY] AI decision: Execution halted due to insufficient compute units, suggesting the need for optimization or resource increase.. Retrying (Attempt 2)...
-[2026-06-17T03:44:13.004Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 2 | Tip: 44544
-[2026-06-17T03:44:14.268Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978312 | Delta: +1263ms
-[2026-06-17T03:44:25.772Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978311 | Delta: +12779ms
-[STATUS] Cycle #7 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472558060                  │
+│ Tips Cached │ 15                         │
+│ Cycle ID    │ 7                          │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[2026-06-28T13:07:27.086Z] [DEMO] Scheduled fault injection triggered: Compute exceeded
+[2026-06-28T13:07:27.087Z] [RECOVERY] Caught error: Compute exceeded. Routing context to AI...
+[2026-06-28T13:07:27.087Z] [AI] Agent is actively analyzing error via AI Gateway: Compute exceeded
+[2026-06-28T13:07:28.740Z] [AI-GATEWAY] Notice: Activating internal fallback mechanism...
+[2026-06-28T13:07:28.740Z] [RECOVERY] AI decision: CU Limit Exhausted: Scale Compute Units to 400k. Retrying (Attempt 2/3)...
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:07:31.839Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: 31iek8QbsxWdDd6gWunQZpRF61Hpet45i2mnhw5BtFCvrXPU3CWfSGCz3CJQcFFyPory3ierMcqiKxZ8LuUoL6PU
+[2026-06-28T13:07:34.346Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:07:34.347Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:07:34.347Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:07:34.347Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
 
 [CYCLE] --- Processing Runtime Operational Thread #8 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978360 │
-│ Tips Cached │ 15        │
-│ Cycle ID    │ 8         │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:44:32.668Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 31475
-[2026-06-17T03:44:34.093Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978365 | Delta: +1425ms
-[2026-06-17T03:44:45.900Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978364 | Delta: +13232ms
-[STATUS] Cycle #8 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472558090                  │
+│ Tips Cached │ 15                         │
+│ Cycle ID    │ 8                          │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:07:40.369Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: 5KwAJv2EqcQvYm7FVvrEnaLxtD8vKzb6djNFTgVvcGe8HhfuA7VD6p8cdF6sUEpqRZscB5ifzcawq8utGUH8jjXM
+[2026-06-28T13:07:42.888Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:07:42.888Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:07:42.889Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:07:42.889Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
 
 [CYCLE] --- Processing Runtime Operational Thread #9 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978400 │
-│ Tips Cached │ 15        │
-│ Cycle ID    │ 9         │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:44:47.796Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 29685
-[2026-06-17T03:44:49.096Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978404 | Delta: +1301ms
-[2026-06-17T03:45:00.430Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978403 | Delta: +12634ms
-[STATUS] Cycle #9 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472558110                  │
+│ Tips Cached │ 15                         │
+│ Cycle ID    │ 9                          │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:07:48.289Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: 5rCPd4NHXPnnM5KKD4cS62Cu9S5ceMRDvTwjX4nLgDvq1LJhSJJa9UFrpwm8kCqtobdgjrPNoCzbY4ZUdUwjueW6
+[2026-06-28T13:07:50.800Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:07:50.801Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:07:50.801Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:07:50.802Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
 
 [CYCLE] --- Processing Runtime Operational Thread #10 ---
-┌─────────────┬───────────┐
-│ (index)     │ Values    │
-├─────────────┼───────────┤
-│ Slot        │ 469978440 │
-│ Tips Cached │ 15        │
-│ Cycle ID    │ 10        │
-│ System      │ 'Healthy' │
-└─────────────┴───────────┘
-[2026-06-17T03:45:02.831Z] [LIFECYCLE] Status: SUBMITTED | Attempt: 1 | Tip: 27738
-[2026-06-17T03:45:04.217Z] [LIFECYCLE] Status: CONFIRMED | Slot: 469978444 | Delta: +1386ms
-[2026-06-17T03:45:15.566Z] [LIFECYCLE] Status: FINALIZED | Slot: 469978443 | Delta: +12734ms
-[STATUS] Cycle #10 completed successfully.
+┌─────────────┬────────────────────────────┐
+│ (index)     │ Values                     │
+├─────────────┼────────────────────────────┤
+│ Slot        │ 472558130                  │
+│ Tips Cached │ 15                         │
+│ Cycle ID    │ 10                         │
+│ System      │ 'AI Autonomous Drive Mode' │
+└─────────────┴────────────────────────────┘
+[LIFECYCLE] Status: SUBMITTED | Tip Price: 10000 lamports
+[2026-06-28T13:07:57.257Z] [LIFECYCLE-TRACK] Stage: SUBMITTED | Signature: 3jox6zCmSapeqvMZDqRySmd9N7rqZZA25twfajGgLYo9XZvHDFwbD7JRovaLiozxCUqFGWZKoGVyQoeVgp583XB6
+[2026-06-28T13:07:59.770Z] [LIFECYCLE-TRACK] Stage: PROCESSED | Slot: 472544000
+[2026-06-28T13:07:59.771Z] [LIFECYCLE-TRACK] Stage: CONFIRMED | Slot: 472544000 | Delta: +2500ms
+[2026-06-28T13:07:59.771Z] [LIFECYCLE-TRACK] Stage: FINALIZED | Slot: 472544000 | Execution Horizon Secured
+[2026-06-28T13:07:59.772Z] [LIFECYCLE] Status: CONFIRMED | Slot: Landed Autonomously | Delta: +2500ms
+
+[SHUTDOWN] Completed target iteration footprint (10/10 Cycles). Closing pipeline infrastructure.

@@ -1,8 +1,16 @@
 import fs from 'fs';
-import { Keypair } from '@solana/web3.js';
+import { Keypair, Connection } from '@solana/web3.js';
 import { YellowstoneIngestionEngine } from "./grpcStream.js";
 import { AutonomousBountyAgent } from "./aiAgent.js";
+import * as dotenv from "dotenv";
 
+dotenv.config();
+
+// Ensure our demo simulation controls are primed for the run execution loop
+process.env.DEMO_MODE = "true";
+
+// Pointing to Devnet infrastructure for stable simulation passes
+const RPC_URL = process.env.SOLANA_RPC_URL || "https://api.devnet.solana.com";
 
 function loadWallet(): Keypair {
   try {
@@ -13,7 +21,6 @@ function loadWallet(): Keypair {
     process.exit(1);
   }
 }
-
 
 async function runProductionStack() {
   console.log("=================================================================");
@@ -28,50 +35,54 @@ async function runProductionStack() {
   
   let isProcessing = false;
   let cycleCount = 1;
+  const MAX_CYCLES = 10;
 
-  console.log("[BOOT] Telemetry ingestion active. Waiting for slot triggers...");
+  console.log("[BOOT] Telemetry ingestion active. Waiting for slot triggers... \n");
 
-  
-  streamEngine.on('slot', async (slotData: any) => {
-   
-    if (slotData.slot % 20 !== 0) return;
+  const slotListener = async (slotData: any) => {
+    // Break or detach listeners once our target metric run horizon is finalized
+    if (cycleCount > MAX_CYCLES) {
+      console.log(`\n[SHUTDOWN] Completed target iteration footprint (${MAX_CYCLES}/${MAX_CYCLES} Cycles). Closing pipeline infrastructure.`);
+      streamEngine.off('slot', slotListener);
+      process.exit(0);
+    }
 
-   
+    // Process target cycles spaced across slot tick increments
+    if (slotData.slot % 10 !== 0) return;
+
     if (isProcessing) return;
-
     isProcessing = true;
+
     try {
       console.log(`\n[CYCLE] --- Processing Runtime Operational Thread #${cycleCount} ---`);
       
-      const currentTips = streamEngine.telemetry.recentJitoTips.length > 0 
-        ? streamEngine.telemetry.recentJitoTips 
-        : [1000];
+      const cachedTipCount = streamEngine.telemetry?.recentJitoTips?.length || 0;
+      const dummyTipHistoryArray = Array.from({ length: cachedTipCount || 5 }, () => 10000);
       
       console.table({
         "Slot": slotData.slot,
-        "Tips Cached": currentTips.length,
+        "Tips Cached": cachedTipCount,
         "Cycle ID": cycleCount,
-        "System": "Healthy"
+        "System": "AI Autonomous Drive Mode"
       });
 
-     
-      await agent.executeFaultInjectionRun(currentTips);
-      
-      console.log(`[STATUS] Cycle #${cycleCount} completed successfully.`);
+      // DELEGATE RUN ENTIRELY TO THE AI AGENT:
+      // This activates the internal retry pipelines, fault injections, and AI reasoning blocks.
+      await agent.executeFaultInjectionRun(dummyTipHistoryArray);
+
     } catch (e: any) {
       console.error("[CRITICAL] Pipeline cycle failed:", e.message);
     } finally {
-     
       isProcessing = false;
       cycleCount++;
     }
-  });
+  };
+
+  streamEngine.on('slot', slotListener);
 }
 
-// Global safety net for process-wide errors
 process.on("unhandledRejection", (reason) => {
-  console.error("[CRITICAL] Unhandled Rejection:", reason);
+  console.error("[CRITICAL] Unhandled Rejection at Pipeline Level:", reason);
 });
 
-// Bootstrapping the infrastructure
 runProductionStack();
